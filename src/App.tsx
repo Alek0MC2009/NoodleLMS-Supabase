@@ -11,6 +11,7 @@ import { useAuth } from "./contexts/AuthContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import Landing from "./pages/Landing";
 import Ventas from "./pages/static/Ventas";
+import Contacto from "./pages/static/Contacto";
 
 function DashboardRedirect() {
   const { loading, user, role } = useAuth();
@@ -80,6 +81,7 @@ function App() {
           />
           <Route path="/unauthorized" element={<UnauthorizedPage />} />
           <Route path="/ventas" element={<Ventas />} />
+          <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
