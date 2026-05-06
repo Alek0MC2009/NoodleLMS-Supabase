@@ -30,6 +30,7 @@ import {
 } from "../../components/ui/dialog";
 import { Input } from "../../components/ui/input";
 import { Label } from "../../components/ui/label";
+import { TrashIcon } from "lucide-react";
 
 type User = Database["public"]["Tables"]["users"]["Row"];
 type Course = Database["public"]["Tables"]["courses"]["Row"];
@@ -253,7 +254,11 @@ function DashboardAdmin() {
           <h1 className="text-xl font-bold">Noodle LMS — Admin</h1>
           <p className="text-sm text-gray-500">Bienvenido, {user.email}</p>
         </div>
-        <Button variant="outline" onClick={handleSignOut}>
+        <Button
+          variant="outline"
+          className="text-red-600 bg-red-100"
+          onClick={handleSignOut}
+        >
           Cerrar sesión
         </Button>
       </header>
@@ -302,7 +307,7 @@ function DashboardAdmin() {
                       <DialogTitle>Crear nuevo usuario</DialogTitle>
                     </DialogHeader>
                     <div className="flex flex-col gap-4 mt-2">
-                      <div>
+                      <div className="">
                         <Label>Nombre de usuario</Label>
                         <Input
                           value={newUsername}
@@ -400,7 +405,7 @@ function DashboardAdmin() {
                             onClick={() => handleDeleteUser(userItem.id)}
                             disabled={userItem.id === user?.id}
                           >
-                            Eliminar
+                            Eliminar <TrashIcon />
                           </Button>
                         </TableCell>
                       </TableRow>

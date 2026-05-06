@@ -162,6 +162,10 @@ function Login() {
                 className="text-sm text-blue-500 hover:underline"
               >
                 ¿No tienes cuenta? Regístrate
+              </Link>{" "}
+              <br />
+              <Link to="/" className="text-sm hover:underline">
+                Volver a la pagina de inicio
               </Link>
             </div>
           </form>

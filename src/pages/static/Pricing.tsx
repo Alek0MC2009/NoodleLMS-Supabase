@@ -67,7 +67,7 @@ const PLANS = [
 function Pricing() {
   return (
     <div>
-      <Header />
+      {/* FIX: */}
       <main className="max-w-5xl mx-auto px-4 py-12 space-y-8">
         <div className="text-center space-y-2">
           <h1 className="text-4xl font-bold">Planes y precios</h1>
@@ -88,8 +88,8 @@ function Pricing() {
             >
               {/* Badge de más popular */}
               {plan.highlighted && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-blue-500 text-white text-xs font-medium px-3 py-1 rounded-full">
+                <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10">
+                  <span className="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                     Más popular
                   </span>
                 </div>

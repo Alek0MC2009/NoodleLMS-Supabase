@@ -24,6 +24,14 @@ function Contacto() {
     setSent(true);
   };
 
+  const anotherMessage = () => {
+    setName("");
+    setEmail("");
+    setCompany("");
+    setMessage("");
+    setSent(false);
+  };
+
   return (
     <div>
       <Header />
@@ -50,7 +58,7 @@ function Contacto() {
                   <p className="text-gray-500">
                     Nos pondremos en contacto contigo en menos de 24 horas.
                   </p>
-                  <Button variant="outline" onClick={() => setSent(false)}>
+                  <Button variant="outline" onClick={anotherMessage}>
                     Enviar otro mensaje
                   </Button>
                 </div>

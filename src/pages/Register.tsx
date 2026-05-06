@@ -225,6 +225,10 @@ function Register() {
               >
                 ¿Ya tienes una cuenta? Inicia sesión
               </Link>
+              <br />
+              <Link to="/" className="text-sm hover:underline">
+                Volver a la pagina de inicio
+              </Link>
             </div>
           </form>
         </CardContent>
